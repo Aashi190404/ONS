@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Assessment Tool</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3a0075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #26004d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Network Assessment Tool</h2>
+        <form id="assessmentForm">
+            <label for="deviceList">Device List:</label>
+            <textarea placeholder="Enter device list (one per line)" name="deviceList" id="deviceList" rows="4"></textarea>
+
+            <label for="configurationUpdate">Configuration Update:</label>
+            <textarea placeholder="Enter configuration update" name="configurationUpdate" id="configurationUpdate" rows="4"></textarea>
+
+            <button type="button" onclick="submitAssessment()">Submit Assessment</button>
+        </form>
+    </div>
+
+    <script>
+        function submitAssessment() {
+            var deviceList = document.getElementById('deviceList').value;
+            var configurationUpdate = document.getElementById('configurationUpdate').value;
+
+            // Simulate backend processing (in a real-world scenario, this would be handled on the server)
+            console.log('Device List:', deviceList);
+            console.log('Configuration Update:', configurationUpdate);
+
+            // Perform additional logic such as API calls to network devices, change management workflows, etc.
+
+            // Display a confirmation message (for simulation purposes)
+            alert('Assessment submitted successfully!');
+
+            // You might redirect the user to a status page or perform other actions as needed.
+        }
+    </script>
+</body>
+</html>

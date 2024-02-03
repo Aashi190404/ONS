@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Report</title>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script><-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3a0075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #26004d;
+        }
+
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Traffic Report</h2>
+        <p>Here goes your historical traffic report content...</p>
+        <button onclick="generatePDF()">Generate PDF</button>
+    </div>
+
+    <!--<script>
+        function generatePDF() {
+            var doc = new jsPDF();
+            // Add content to the PDF
+            doc.text('Historical Traffic Report', 20, 10);
+            doc.text('Date: ' + new Date().toLocaleDateString(), 20, 20);
+            doc.text('Traffic data: Your traffic data goes here...', 20, 30);
+
+            // Save the PDF
+            doc.save('Traffic_Report.pdf');
+        }
+    </script><-->
+</body>
+</html>

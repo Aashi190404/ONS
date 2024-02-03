@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandwidth Monitor</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3a0075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #26004d;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 8px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bandwidth Monitor</h2>
+        <form id="bandwidthForm">
+            <label for="usage">Current Usage (MB):</label>
+            <input type="number" placeholder="Enter current usage" name="usage" id="usage">
+
+            <label for="limit">Predefined Limit (MB):</label>
+            <input type="number" placeholder="Enter predefined limit" name="limit" id="limit">
+
+            <button type="button" onclick="checkBandwidth()">Check Bandwidth</button>
+
+            <p class="error-message" id="errorMessage"></p>
+            <p class="success-message" id="successMessage"></p>
+        </form>
+    </div>
+
+    <script>
+        function checkBandwidth() {
+            var currentUsage = parseFloat(document.getElementById('usage').value);
+            var predefinedLimit = parseFloat(document.getElementById('limit').value);
+            var errorMessageElement = document.getElementById('errorMessage');
+            var successMessageElement = document.getElementById('successMessage');
+
+            // Basic validation - check if fields are not empty
+            if (isNaN(currentUsage) || isNaN(predefinedLimit)) {
+                errorMessageElement.textContent = 'Please enter valid numbers.';
+            } else {
+                errorMessageElement.textContent = '';
+
+                // Check if current usage exceeds predefined limit
+                if (currentUsage > predefinedLimit) {
+                    successMessageElement.textContent = 'Bandwidth exceeded! Notify by email.';
+                    // In a real-world scenario, you would send an email using a server-side component
+                    // For the frontend, you might trigger an API endpoint on your server to handle this.
+                    // Example: sendEmailNotification(currentUsage, predefinedLimit);
+                } else {
+                    successMessageElement.textContent = 'Bandwidth within limit.';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

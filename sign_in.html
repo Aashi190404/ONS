@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3a0075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #26004d;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 8px;
+        }
+
+        a{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="companyname">CompanyName:</label>
+            <input type="text" placeholder="Enter your company name" name="companyname" id="companyname">
+
+            <label>Position:</label>
+            <select name="position" id="position">
+                <option value="HR">HR</option>
+                <option value="Owner">Owner</option>
+            </select>
+
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter your username" name="username" id="username">
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your email" name="email" id="email">
+
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter your password" name="password" id="password">
+
+            <button type="button" onclick="validateLogin()"><a href="main.html">Login</a></button>
+
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var companyname = document.getElementById('companyname').value;
+            var position = document.getElementById('position').value;
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var errorMessageElement = document.getElementById('errorMessage');
+
+            // Basic validation - check if fields are not empty
+            if (companyname.trim() === ''||username.trim() === ''||email.trim() === '' || password.trim() === '') {
+                errorMessageElement.textContent = 'All fields are required.';
+            } else {
+                alert('Login successful!');
+                // You can redirect the user or perform other actions after successful login
+            }
+        }
+    </script>
+</body>
+</html>

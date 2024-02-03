@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Assessment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3a0075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #26004d;
+        }
+
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Network Assessment System</h2>
+        <form id="assessmentForm">
+            <label for="deviceList">Device List:</label>
+            <textarea placeholder="Enter device list (one per line)" name="deviceList" id="deviceList" rows="4" aria-describedby="deviceListHelp"></textarea>
+            <p id="deviceListHelp" class="help-text">Separate each device with a new line.</p>
+
+            <button type="button" onclick="scanDevices()">Scan Devices</button>
+        </form>
+    </div>
+
+    <script>
+        function scanDevices() {
+            var deviceList = document.getElementById('deviceList').value;
+
+            // Simulate backend processing (vulnerability scanning and security checks)
+            console.log('Scanning Devices:', deviceList);
+
+            // Display a confirmation message (for simulation purposes)
+            alert('Device scanning initiated!');
+
+            // You might redirect the user to a status page or perform other actions as needed.
+        }
+    </script>
+</body>
+</html>
