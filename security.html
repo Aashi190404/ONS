@@ -66,10 +66,16 @@
         <h2>Network Assessment System</h2>
         <form id="assessmentForm">
             <label for="deviceList">Device List:</label>
-            <textarea placeholder="Enter device list (one per line)" name="deviceList" id="deviceList" rows="4" aria-describedby="deviceListHelp"></textarea>
+            <textarea placeholder="Device list (one per line)" name="deviceList" id="deviceList" rows="4" aria-describedby="deviceListHelp"></textarea>
             <p id="deviceListHelp" class="help-text">Separate each device with a new line.</p>
 
             <button type="button" onclick="scanDevices()">Scan Devices</button>
+        </form>
+    </div>
+    <div class="container">
+        <form id="assessmentForm">
+            <label for="deviceList">Device List:</label>
+            <textarea placeholder="Devices at risk" name="deviceList" id="deviceList" rows="4" aria-describedby="deviceListHelp"></textarea>
         </form>
     </div>
 
