@@ -1,18 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntroductoryPage</title>
-    <link rel="stylesheet" href="get_started.css">
-</head>
+    <title>Introductory Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
 
+        .topnav {
+            background-color: #3a0075;
+            overflow: hidden;
+            text-align: center; /* Center align the links */
+        }
+
+        .topnav a {
+            color: #ede9f1;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: inline-block; /* Display links horizontally */
+        }
+
+        .topnav a:hover {
+            background-color: #0d023b;
+        }
+
+        .topnav a.active {
+            background-color: #d8c9ec;
+            color: rgb(53, 3, 96);
+        }
+
+        .topnav a.active:hover {
+            background-color: #750c7e;
+        }
+
+        body {
+            font-size: 1.25rem;
+            font-family: cursive;
+        }
+
+        .head {
+            color: #210241;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #but3 {
+            background-color: #3a0075;
+            border: 2px solid white;
+            padding: 10px 27px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: block;
+            margin: 0 auto; /* Center the button */
+            margin-top: 20px; /* Add some space */
+        }
+
+        a {
+            color: white;
+        }
+
+        /* Media Queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .topnav a {
+                display: block;
+                width: 100%; /* Make each nav link occupy full width */
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="topnav">
         <a class="active" href="#over">Overview</a>
         <a href="#agenda">Agenda</a>
-        <a href="#spl">Specialities</a>
+        <a href="#spl">Specialties</a>
         <a href="#acc">Conclusion</a>
     </div>
     <div>
@@ -20,17 +92,17 @@
         <h1 class="head">Overview:</h1><br><hr>
         <br>
         <p id="#over">
-        <h2 class="head2">What is network assessment?</h2>
-        A network assessment is an evaluation or analysis of an existing network infrastructure that helps to identify
-        underutilized or overutilized network resources, plan for network upgrades, ensure compliance, and improve
-        network performance and security.<br>
-        <br>
-        <h2 class="head2">What does network assessment system does?</h2>
-        Network assessment software offers a variety of helpful features such as reports, security scans, IT
-        inventories, checklists, and more. The software automatically discovers devices and displays maps to help
-        administrators monitor the fault, availability,
-        and performance of all devices within their network. Network assessment is like a check-up for your network, and
-        it is particularly advantageous for businesses without full visibility into their network
+            <h2 class="head2">What is network assessment?</h2>
+            A network assessment is an evaluation or analysis of an existing network infrastructure that helps to identify
+            underutilized or overutilized network resources, plan for network upgrades, ensure compliance, and improve
+            network performance and security.<br>
+            <br>
+            <h2 class="head2">What does the network assessment system do?</h2>
+            Network assessment software offers a variety of helpful features such as reports, security scans, IT
+            inventories, checklists, and more. The software automatically discovers devices and displays maps to help
+            administrators monitor the fault, availability,
+            and performance of all devices within their network. Network assessment is like a check-up for your network, and
+            it is particularly advantageous for businesses without full visibility into their network
         </p>
         <br><hr><br>
         <h1 class="head" id="agenda">Agenda</h1><br><hr><br>
@@ -40,19 +112,19 @@
             to make our system usable for people having disabilities along with normal users.
         </p>
         <br><hr><br>
-        <h1 class="head" id="spl">Specialities</h1><br><hr><br>
+        <h1 class="head" id="spl">Specialties</h1><br><hr><br>
         <p>
-        <h2>Voice Navigation:</h2>
-        The system would be fully operable using voice, as some users with mobility impairments may not be able to
-        use a mouse or other hardware softwares.<br>
-        <br>
-        <h2>Alternative Text for visual elements:</h2>
-        All visual elements, such as graphs and charts, will have alternative text descriptions to make the content
-        accessible to users who are visually impaired.<br>
-        <br>
-        <h2>Ensuring Compatibility:</h2>
-        The system will be compatible with screen readers, magnifiers, and other assistive technologies commonly used by
-        individuals with disabilities.<br>
+            <h2>Keyboard Navigation:</h2>
+            The system would be fully operable using a keyboard, as some users with mobility impairments may not be able to
+            use a mouse.<br>
+            <br>
+            <h2>Alternative Text for visual elements:</h2>
+            All visual elements, such as graphs and charts, will have alternative text descriptions to make the content
+            accessible to users who are visually impaired.<br>
+            <br>
+            <h2>Ensuring Compatibility:</h2>
+            The system will be compatible with screen readers, magnifiers, and other assistive technologies commonly used by
+            individuals with disabilities.<br>
         </p>
         <br><hr><br>
         <h1 class="head" id="acc">Conclusion</h1><br><hr><br>
@@ -60,16 +132,15 @@
             Network assessing systems are readily available and accessible to organizations of all sizes. It helps in
             automating the process of assessing the network, identifying potential problems, and providing real-time
             insights into the network's health and performance.
-            But along with that our network assessing system can be used by users who have certain disabilities such as
-            visual impairment, mobility impairment and cognitive disabilities.
+            But along with that, our network assessing system can be used by users who have certain disabilities such as
+            visual impairment, mobility impairment, and cognitive disabilities.
             Thus, making it accessible to a very wide range of users.
         </p><br><hr>
         <br>
-        <button type="button" style="align-content: center;" id="but3"><a href="sign_in.html" target="_blank">Sign Up</a></button>
+        <button type="button" id="but3"><a href="sign_in.html" target="_blank">Login</a></button>
         <br><br>
         <hr>
         <br><br>
     </div>
 </body>
-
 </html>
