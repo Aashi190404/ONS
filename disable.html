@@ -3,15 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disable</title>
-    <link rel="stylesheet" href="disable.css">
+    <title>Visual</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 16px; /* Base font size */
+            font-family: Arial, sans-serif; /* Default font family */
+            line-height: 1.6; /* Line height for better readability */
+        }
+
+        .container {
+            max-width: 100%; /* Full width container */
+            padding: 0 20px; /* Add some padding to the sides */
+            margin: 0 auto; /* Center the container */
+        }
+
+        h1 {
+            font-size: 2rem; /* Adjusted font size for responsiveness */
+            text-align: center; /* Center align the headings */
+            margin-bottom: 20px; /* Add some space below the headings */
+        }
+
+        img {
+            display: block; /* Ensure images behave as blocks */
+            margin: 0 auto; /* Center align the images */
+            max-width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add some space below the images */
+        }
+
+        /* Media Query for responsiveness */
+        @media only screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Adjusted font size for smaller screens */
+            }
+
+            img {
+                width: 75%; /* Make images occupy full width */
+                margin-left: 0; /* Remove margin-left */
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Graph for Collected Data:</h1>
-        <img src="https://wcs.smartdraw.com/chart/img/basic-bar-graph.png?bn=15100111903" height="300rem" width="400rem">
+        <img src="https://wcs.smartdraw.com/chart/img/basic-bar-graph.png?bn=15100111903" alt="Graph for Collected Data">
         <h1>Pie chart for collected data:</h1>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220914112521/PieChart.png" height="300rem" width="400rem">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220914112521/PieChart.png" alt="Pie chart for collected data">
     </div>
 </body>
 </html>
